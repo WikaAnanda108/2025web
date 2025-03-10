@@ -6,9 +6,9 @@
     <title>SIMPADU POLIBAN</title>
 </head>
 <body>
-    <h1> DATA MAHASISWA </h1>
- <br>
- <table border="1" cellspacing="0" cellpadding"S">
+    <h1>Data Prodi</h1>
+    <br>
+     <table border="1" cellspacing="0" cellpadding"S">
         <thread>
             <th>No</th>
             <th>NIM</th>
