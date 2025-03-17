@@ -1,3 +1,11 @@
+<?php
+include "koneksi.php";
+
+$query = "SELECT * FROM prodi";
+$data = ambildata($query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,20 +18,27 @@
     <br>
      <table border="1" cellspacing="0" cellpadding"S">
         <thread>
-            <th>No</th>
-            <th>NIM</th>
-            <th>Nama</th>
+        <th>no</th>    
+        <th>id</th>
+            <th>nama</th>
+            <th>kaprodi</th>
+            <th>jurusan</th>
+            
     </thread>
         <tbody>
+            <?php
+            $i =1;
+            foreach($data as $d) : ?>
     <tr>
-        <td>1</td>
-        <td>E020323108</td>
-        <td>Wika</td>
+        <td><?php echo $i++ ?></td>
+        <td><?php echo $d ["id"] ?></td>
+        <td><?php echo $d ["nama"] ?></td>
+        <td><?php echo $d ["kaprodi"] ?></td>
+        <td><?php echo $d ["jurusan"] ?></td>
 </tr>
-<tr>
-        <td>2</td>
-        <td>E020323085</td>
-        <td>Amel</td>
-    </tr>
+<?php endforeach ; ?>
+   </tbody>
+</table>
 </body>
+
 </html>

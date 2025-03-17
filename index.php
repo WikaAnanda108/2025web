@@ -1,3 +1,11 @@
+<?php
+include "koneksi.php";
+$query = "SELECT * FROM mahasiswa";
+$data = ambildata ($query);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +14,35 @@
     <title>SIMPADU POLIBAN</title>
 </head>
 <body>
-    <h1> DATA MAHASISWA </h1>
- <br>
- <table border="1" cellspacing="0" cellpadding"S">
+<h1>Data Mahasiswa</h1>
+    <br>
+     <table border="1" cellspacing="0" cellpadding"S">
         <thread>
-            <th>No</th>
-            <th>NIM</th>
-            <th>Nama</th>
+        <th>no</th>
+            <th>nim</th>
+            <th>nama</th>
+            <th>tanggal_lahir</th>
+            <th>telp</th>
+            <th>email</th>
+            <th>id</th>
     </thread>
         <tbody>
+            <?php
+            $i =1;
+            foreach($data as $d) : ?>
+
     <tr>
-        <td>1</td>
-        <td>E020323108</td>
-        <td>Wika</td>
+        <td><?php echo $i++ ?></td>
+        <td><?php echo $d ["nim"] ?></td>
+        <td><?php echo $d ["nama"] ?></td>
+        <td><?php echo $d ["tanggal_lahir"] ?></td>
+        <td><?php echo $d ["telp"] ?></td>
+        <td><?php echo $d ["email"] ?></td>
+        <td><?php echo $d ["id"] ?></td>
 </tr>
-<tr>
-        <td>2</td>
-        <td>E020323085</td>
-        <td>Amel</td>
-    </tr>
+<?php endforeach ; ?>
+<tbody>
+ </table>   
 </body>
+
 </html>
