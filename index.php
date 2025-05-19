@@ -9,7 +9,7 @@ $query = "SELECT m.*, p.nama namaProdi FROM mahasiswa m JOIN prodi p ON m.id_pro
 $data = ambildata($query);
 
 include "template/header.php";
-include "template/sidebar.php"
+include "template/sidebar.php";
 ?>
 
   <!--begin::App Main-->
@@ -20,7 +20,7 @@ include "template/sidebar.php"
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-              <div class="col-sm-6"><h3 class="mb-0">Data Prodi</h3></div>
+              <div class="col-sm-6"><h3 class="mb-0">Dashboard</h3></div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -48,19 +48,27 @@ include "template/sidebar.php"
       <!--end::App Main-->
 
       <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="card mb-4">
-                  <div class="card-header"><h3 class="card-title">Data Mahasiswa</h3></div>
+                  <div class="card-header">
+                    <h3 class="card-title">Data Mahasiswa</h3>
+                  <div class="card-tools">
+                    <a href="tambahmahasiswa.php" class="btn btn-primary">Tambah</a>
+                    </div>
+                  </div>
                   <!-- /.card-header -->
                   <div class="card-body">
                     <table class="table table-bordered">
                       <thead>
-                        <tr>
+                               <tr>
                         <th>no</th>    
                         <th>id</th>
                         <th>nama</th>
-                        <th>kaprodi</th>
-                    <th>jurusan</th>
+                        <th>tanggal_lahir</th>
+                        <th>telp</th>
+                        <th>email</th>
+                        <th>prodi</th>
+                    <th>Aksi</th>
                          
                         </tr>
                         </thead>
@@ -89,7 +97,7 @@ include "template/sidebar.php"
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href = "logout.php">Logout</a>
+    
     </div>
 
 <?php

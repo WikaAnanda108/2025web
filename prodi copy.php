@@ -18,8 +18,8 @@ $data = ambildata($query);
     <br>
      <table border="1" cellspacing="0" cellpadding"S">
         <thread>
-        <th>no</th>    
-        <th>id</th>
+            <th>no</th>    
+            <th>id</th>
             <th>nama</th>
             <th>kaprodi</th>
             <th>jurusan</th>
